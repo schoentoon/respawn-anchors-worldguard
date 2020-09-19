@@ -1,0 +1,5 @@
+name: RespawnAnchorsWorldGuard
+version: ${project.version}
+main: com.schoentoon.respawnanchorsworldguard.RespawnAnchorsWorldGuard
+api-version: 1.16
+depend: [WorldGuard]
