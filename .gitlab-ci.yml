@@ -20,15 +20,34 @@ cache:
   paths:
     - .m2/repository
 
-verify:
+verify:plugin:
   stage: test
   script:
     - 'mvn $MAVEN_CLI_OPTS verify'
 
-package:
+package:plugin:
   stage: build
   script:
     - 'mvn $MAVEN_CLI_OPTS package'
   artifacts:
     paths:
       - target/*.jar
+
+validate_json:datapack:
+  image: alpine
+  stage: test
+  before_script:
+    - apk add yajl-tools
+  script:
+    - find datapack -type f -name \*.json -print0 | xargs -0 -n 1 -I % sh -c "echo %; cat % | json_verify"
+
+package:datapack:
+  image: alpine
+  stage: build
+  before_script:
+    - apk add zip
+  script:
+    - cd datapack; zip -r $CI_PROJECT_NAME .zip pack.mcmeta data/
+  artifacts:
+    paths:
+      - "datapack/*.zip"
