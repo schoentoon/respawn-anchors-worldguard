@@ -1,6 +1,6 @@
 {
    "pack" : {
       "description" : "Enable respawn anchors in overworld",
-      "pack_format" : 6
+      "pack_format" : 7
    }
 }
