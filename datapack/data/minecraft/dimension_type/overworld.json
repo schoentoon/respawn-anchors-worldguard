@@ -1,16 +1,17 @@
 {
-  "ambient_light" : 0,
+  "ambient_light" : 0.0,
   "bed_works" : true,
-  "coordinate_scale" : 1,
+  "coordinate_scale" : 1.0,
+  "effects": "minecraft:overworld",
   "has_ceiling" : false,
   "has_raids" : true,
   "has_skylight" : true,
   "infiniburn" : "minecraft:infiniburn_overworld",
-  "logical_height" : 256,
+  "logical_height" : 384,
   "natural" : true,
   "piglin_safe" : false,
   "respawn_anchor_works" : true,
   "ultrawarm" : false,
-  "min_y": 0,
-  "height": 256
+  "min_y": -64,
+  "height": 384
 }
