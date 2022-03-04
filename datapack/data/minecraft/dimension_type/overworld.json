@@ -6,7 +6,7 @@
   "has_ceiling" : false,
   "has_raids" : true,
   "has_skylight" : true,
-  "infiniburn" : "minecraft:infiniburn_overworld",
+  "infiniburn" : "#minecraft:infiniburn_overworld",
   "logical_height" : 384,
   "natural" : true,
   "piglin_safe" : false,
